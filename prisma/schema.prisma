@@ -28,3 +28,11 @@ model Plant {
   createdAt           DateTime  @default(now())
   updatedAt           DateTime  @updatedAt
 }
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String   // Lưu mật khẩu đã được mã hóa
+  name      String?
+  createdAt DateTime @default(now())
+}
